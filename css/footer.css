@@ -82,11 +82,39 @@
 .footer-nav-navegacion__link-text{}
 
 @media (min-width: 650px){
+
     .footer-container{
         flex-direction: row;
+        padding: 2em;
+        max-width: 1024px;
+        margin: auto;
+        justify-content: space-around;
+    }
+
+    .footer-nav-redes{
+        font-size: 1.5rem;
+    }
+
+    .footer-nav-navegation{
+        font-size: 1.5rem;
+    }
+
+    .footer-nav-navegation__menu-name{
+        color: var(--secondary-theme-color);
+        font-size: 2rem;
     }
 
     .footer-nav-navegation__menu-list{
         flex-direction: row;
+        gap: 2rem;
+    }
+
+    .footer-nav-navegation__checkbox:checked+.footer-nav-navegation__link-list{
+        display: flex;
+    }
+
+    .footer-nav-navegation__link-list{
+        background-color: transparent;
+        padding: 0.5em 0;
     }
 }
