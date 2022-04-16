@@ -1,0 +1,154 @@
+:root {
+    scroll-behavior: smooth;
+    --primary-theme-color: #20232a;
+    --secondary-theme-color: #282c34;
+    --text-color: #fff;
+    --primary-shadow-color: #8888;
+    --secondary-shadow-color: #21242c80;
+    --button-color: #61dafb;
+    --button-color-active: #fff;
+    --button-text-color: #000;
+    --primary-highlight-color: #61dafb;
+    --secondary-highlight-color: #ffd700;
+    --padding-section: 4rem 0;
+    --padding-container: 0 2rem;
+    --max-width-container: 1024px;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://i.postimg.cc/rmkqYyzx/fondo-polleria.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.section__figure-image-container {
+    display: grid;
+    gap: 0.5rem;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+}
+
+.section__figure-image {
+    width: 100%;
+}
+
+.section__figure-image:nth-child(1) {
+    display: none;
+}
+
+.section__figure-image:nth-child(2) {
+    display: none;
+}
+
+.section__figure-image:nth-child(3) {
+    display: none;
+}
+
+.section__figure-image:nth-child(6) {
+    display: none;
+}
+
+@media (min-width: 854px) {
+
+    .section__figure-image:nth-child(n) {
+        display: grid;
+    }
+
+    .section__figure-image:nth-child(7) {
+        display: none;
+    }
+
+    .section__figure-image-container {
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "item1 item3 item5"
+            "item2 item3 item6"
+            "item4 item4 item6";
+    }
+
+    .section__figure-image:nth-child(1) {
+        grid-area: item1;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .section__figure-image:nth-child(1):hover {
+        box-shadow:
+            0 0 0.25rem 0 var(--primary-highlight-color),
+            0 0 0.5rem 0 var(--primary-highlight-color);
+        transform: translateY(-0.2rem);
+    }
+
+    .section__figure-image:nth-child(2) {
+        grid-area: item2;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .section__figure-image:nth-child(2):hover {
+        box-shadow:
+            0 0 0.25rem 0 var(--primary-highlight-color),
+            0 0 0.5rem 0 var(--primary-highlight-color);
+        transform: translateY(-0.2rem);
+    }
+
+    .section__figure-image:nth-child(3) {
+        grid-area: item3;
+        transition: all ease-in-out 0.5s;
+        height: 100%;
+    }
+
+    .section__figure-image:nth-child(3):hover {
+        box-shadow:
+            0 0 0.25rem 0 var(--primary-highlight-color),
+            0 0 0.5rem 0 var(--primary-highlight-color);
+        transform: translateY(-0.2rem);
+    }
+
+    .section__figure-image:nth-child(4) {
+        grid-area: item4;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .section__figure-image:nth-child(4):hover {
+        box-shadow:
+            0 0 0.25rem 0 var(--primary-highlight-color),
+            0 0 0.5rem 0 var(--primary-highlight-color);
+        transform: translateY(-0.2rem);
+    }
+
+    .section__figure-image:nth-child(5) {
+        grid-area: item5;
+        height: 100%;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .section__figure-image:nth-child(5):hover {
+        box-shadow:
+            0 0 0.25rem 0 var(--primary-highlight-color),
+            0 0 0.5rem 0 var(--primary-highlight-color);
+        transform: translateY(-0.2rem);
+    }
+
+
+    .section__figure-image:nth-child(6) {
+        grid-area: item6;
+        height: 100%;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .section__figure-image:nth-child(6):hover {
+        box-shadow:
+            0 0 0.25rem 0 var(--primary-highlight-color),
+            0 0 0.5rem 0 var(--primary-highlight-color);
+        transform: translateY(-0.2rem);
+    }
+}
