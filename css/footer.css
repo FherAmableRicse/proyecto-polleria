@@ -1,3 +1,12 @@
+@keyframes redes-animation{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
 .footer{
     width: 100%;
 }
@@ -25,8 +34,19 @@
     margin: 0;
 }
 
-.footer-nav-redes__link{
+.footer-nav-redes__link-one{
     transition: var(--all-transitions);
+    animation: redes-animation 1s ease-in-out 0s infinite alternate;
+}
+
+.footer-nav-redes__link-two{
+    transition: var(--all-transitions);
+    animation: redes-animation 1s ease-in-out -0.25s infinite alternate;
+}
+
+.footer-nav-redes__link-three{
+    transition: var(--all-transitions);
+    animation: redes-animation 1s ease-in-out -0.5s infinite alternate;
 }
 
 .footer-nav-navegation{
