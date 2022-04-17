@@ -52,10 +52,6 @@
     background-color: var(--primary-theme-color);
 }
 
-.header-nav {
-    padding: 0.5em 0;
-}
-
 .header-nav__container {
     display: flex;
     align-items: center;
