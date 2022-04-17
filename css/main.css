@@ -1,34 +1,34 @@
+
+.main__conteiner {
+
+    display: flex;
+    margin-top: 20rem;
+    padding: 0 2rem;
+    margin-top: 5em;
+    padding: 0 2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.563rem;
+}
+
 .menu__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-
 }
 
 .menu__link {
     text-decoration: none;
 }
 
-/* .menu__link:nth-child(3){
-    display: none;
-}
-.menu__link:nth-child(4){
-    display: none;
-}
-.menu__link:nth-child(5){
-    display: none;
-}
-.menu__link:nth-child(6){
-    display: none;
-} */
-
 .menu__image {
-    max-width: 125px;
-    height: 125px;
+    max-width: 7.813rem;
+    height: 7.813rem;
     border-radius: 50%;
-    border: solid #ffffff;
+    border: solid var(--main-shadow-color);
 }
 
 .menu__image:hover {
@@ -39,13 +39,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
-    color: #000000;
-    text-shadow: 0 0 0.2rem #ffffff;
+    font-size: 0.625rem;
+    color:var(--main-text-color);
+    text-shadow: 0 0 0.2rem var(--main-shadow-color);
 }
 
 .menu__text:hover {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .main__publicity-container {
@@ -61,39 +61,23 @@
     align-items: center;
     text-align: center;
     margin: 0 1rem;
-    font-size: 15px;
-    color: #000000;
-    text-shadow: 0 0 0.2rem #ffffff;
+    font-size: 0.938rem;
+    color: var(--main-text-color);
+    text-shadow: 0 0 0.2rem var(--main-shadow-color);
 }
 
 .main__publicity-image {
     display: none;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 854px) {
     .main__publicity-image {
         display: flex;
         margin: 0 2rem;
-        width: 450px;
+        width: 28.125rem;
     }
 
-    /* .menu__link:nth-child(3){
-        display: inline ;
+    .menu__container {
+        margin: 3rem;
     }
-    
-    .menu__link:nth-child(4){
-        display: inline ;
-    }
-
-    .menu__link:nth-child(5){
-        display: inline ;
-    }
-
-    .menu__link:nth-child(6){
-        display: inline ;
-    }
-
-    .menu__link:nth-child(7){
-        display: inline ;
-    } */
 }
