@@ -17,17 +17,21 @@
     --all-transitions: all 0.25s;
 }
 
-.section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(https://i.postimg.cc/rmkqYyzx/fondo-polleria.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    overflow: hidden;
-}
 
+/* @keyframes delivery {
+
+    100% {
+        left: 0rem;
+        transform: translateX(104rem);
+    }
+} */
+
+/* @keyframes deliveryMobile {
+    100% {
+        left: 0rem;
+        transform: translateX(30rem);
+    }
+} */
 
 .section__figure-image-container {
     display: grid;
@@ -57,10 +61,24 @@
     display: none;
 }
 
+/* .section__delivery-image-container {
+    max-width: var(--max-width-container);
+} */
+
+/* .section__delivery-image {
+
+    width: 0%;
+} */
+
+
 @media (min-width: 854px) {
 
+    .section__figure-image-container {
+        width: 65%;
+    }
+
     .section__figure-image:nth-child(n) {
-        display: grid;
+        display: flex;
     }
 
     .section__figure-image:nth-child(7) {
@@ -68,7 +86,7 @@
     }
 
     .section__figure-image-container {
-        gap: 2rem;
+        gap: 1rem;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
             "item1 item3 item5"
@@ -151,4 +169,15 @@
             0 0 0.5rem 0 var(--primary-highlight-color);
         transform: translateY(-0.2rem);
     }
+
+    /* .section__delivery-image {
+        z-index: -1;
+        width: 10%;
+        position: absolute;
+        top: 90%;
+        animation: delivery 3s linear -1s infinite;
+        pointer-events: none;
+    }
+    */
+
 }

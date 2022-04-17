@@ -4,7 +4,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color:var(--primary-theme-color);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
@@ -12,15 +11,11 @@
 .header-nav {
   padding: 0;
   margin: 0;
+  background-color:var(--primary-theme-color);
 }
 
 .header-nav__containersuperior {
-  display: flex;
-  align-items: center;
-  background-color: rgb(210, 30, 30);
-  justify-content:space-between;
-  max-width: var(--max-width-container);
-  padding: 0.05em;
+  display: none;
 }
 
 .header-nav__register-link{
@@ -134,6 +129,21 @@
   .header-nav__menu-icon-label {
     display: none;
   }
+
+  .header-nav{
+    
+  }
+
+  .header-nav__containersuperior {
+    display: flex;
+    align-items: center;
+    background-color: rgb(210, 30, 30);
+    justify-content:space-between;
+    max-width: var(--max-width-container);
+    /* padding: 0em; */
+    margin-bottom: 0.5rem;
+  }
+
   .header-nav__register-link{
     display: flex;
     background-color: var(--button-color);
