@@ -1,4 +1,8 @@
+
 @import url(./main.css);
+@import url(./footer.css);
+@import url(./section.css);
+
 :root {
     --primary-theme-color: #8b5d3e;
     --secondary-theme-color: #b99d73;
@@ -127,12 +131,23 @@
     width: 100%;
 }
 
-.footer__container{
+.main__conteiner {
     display: flex;
+    margin-top: 5rem;
+    padding: 0 2rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
-    gap: 1rem;
+    font-size: 25px;
+}
+
+.main__parrafo {
+    margin: 1rem 1rem;
+}
+
+.main__img {
+    width: 70%;
+    border-radius: 2rem;
 }
 
 @media (min-width: 650px) {
