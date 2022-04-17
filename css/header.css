@@ -38,7 +38,7 @@
 
   .header-nav__link-logo-container {
     display: flex;
-    height: 8rem;
+    height: 5rem;
     border-radius: 50%;
     overflow: hidden;
     transition: var(--all-transitions);
@@ -53,10 +53,6 @@
 }
 
 .header-nav__link-logo {
-  height: 100%;
-}
-
-.header-nav__link-logocodigo {
   height: 100%;
 }
 
