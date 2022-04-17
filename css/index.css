@@ -19,11 +19,16 @@
 }
 
 .body {
-    background-image: linear-gradient(to right, var(--primary-gradient-color), var(--secondary-gradient-color));
+    background-image: linear-gradient(var(--primary-gradient-color), var(--secondary-gradient-color));
     /* background-color: var(--secondary-theme-color); */
     color: var(--text-color);
     font-family: 'Cookie', cursive;
+    padding: 0;
     margin: 0;
+}
+
+.main {
+    width: 100%;
 }
 
 .header {
@@ -133,6 +138,7 @@
 }
 
 .main__conteiner {
+
     display: flex;
     margin-top: 5rem;
     padding: 0 2rem;
