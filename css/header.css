@@ -131,7 +131,7 @@
   }
 
   .header-nav{
-    
+    margin: 0;
   }
 
   .header-nav__containersuperior {
@@ -140,8 +140,7 @@
     background-color: rgb(210, 30, 30);
     justify-content:space-between;
     max-width: var(--max-width-container);
-    /* padding: 0em; */
-    margin-bottom: 0.5rem;
+    
   }
 
   .header-nav__register-link{
