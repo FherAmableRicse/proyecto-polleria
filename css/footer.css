@@ -9,6 +9,7 @@
 
 .footer{
     width: 100%;
+    font-family: 'Oswald', sans-serif;
 }
 
 .footer-container{
@@ -18,6 +19,7 @@
     max-width: var(--max-width-container);
     padding: var(--padding-container);
     background-color: var(--primary-theme-color);
+    padding-bottom: 1em;
 }
 
 .footer-nav-redes{
@@ -28,6 +30,8 @@
     padding: 1em;
     background-color: var(--primary-shadow-color);
     border-radius: var(--border-radius);
+    margin: 1rem 0;
+    font-size: 1rem;
 }
 
 .footer-nav-redes__header{
@@ -62,11 +66,8 @@
     padding: 0;
 }
 
-.footer-nav-navegation__menu-item{
-}
-
 .footer-nav-navegation__menu-name{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .footer-nav-navegation__checkbox{
@@ -87,8 +88,6 @@
     border-radius: var(--border-radius);
 }
 
-.footer-nav-navegation__link-item{}
-
 .footer-nav-navegacion__link{
     text-decoration: none;
     color: var(--text-color);
@@ -99,16 +98,13 @@
     color: var(--secondary-theme-color);
 }
 
-.footer-nav-navegacion__link-text{}
-
 @media (min-width: 650px){
 
     .footer-container{
         flex-direction: row;
         padding: 2em;
-        max-width: 1024px;
-        margin: auto;
         justify-content: space-around;
+        margin-top: 1rem;
     }
 
     .footer-nav-redes{

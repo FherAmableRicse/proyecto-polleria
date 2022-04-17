@@ -33,9 +33,6 @@
     }
 } */
 
-.section {}
-
-
 .section__figure-image-container {
     display: grid;
     gap: 0.5rem;
