@@ -1,0 +1,148 @@
+@import './mixins';
+@import './animations';
+
+:root {
+    --main-text-color: #000000;
+    --main-shadow-color: #ffffff;
+    /* --secondary-theme-color: #ff0000; */
+    --primary-gradient-color: #c4c5c7;
+    --secondary-gradient-color: #ebebeb;
+    --primary-theme-color: #8b5d3e;
+    --secondary-theme-color: #b99d73;
+    --text-color: #fff;
+    --primary-shadow-color: #867e7e88;
+    --primary-highlight: #eccb0c;
+    --secondary-highlight: #ffd700;
+    --primary-highlight-color: #ff0000;
+    /* --secondary-highlight-color: #ffd700; */
+    --pading-section: 2em 0;
+    --padding-container: 0 2em;
+    --max-width-container: 1920px;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+    --button-color: #ffffff;
+    /* --button-color-active: #fff; */
+    --button-text-color: #000;
+    --font-main: 'Ultra', serif;
+    --font-header-footer: 'Oswald', sans-serif; 
+    scroll-behavior: smooth;
+
+}
+
+.footer{
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+
+    &-container{
+        @include d-flex-fd-ai-jc-g(column, stretch, center, 0.5rem);
+        @include container(var(--max-width-container), var(--padding-container));
+        background-color: var(--primary-theme-color);
+        padding-bottom: 1em;
+
+        @include desktop(){
+            @include d-flex-fd-ai-jc-g(row, stretch, space-around, 0.5rem);
+            padding: 2em;
+            margin-top: 1rem;
+        }
+    }
+
+    &-nav{
+        &-redes{
+            @include d-flex-fd-ai-jc-g(row, center, center, 1rem);
+            padding: 1em;
+            background-color: var(--primary-shadow-color);
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            font-size: 1rem;
+
+            @include desktop(){
+                font-size: 1rem + 0.5rem;
+            }
+
+            &__header{
+                margin: 0;
+            }
+
+            &__link-one{
+                transition: var(--all-transitions);
+                animation: redes-animation 1s ease-in-out 0s infinite alternate;
+            }
+        
+            &__link-two{
+                transition: var(--all-transitions);
+                animation: redes-animation 1s ease-in-out -0.25s infinite alternate;
+            }
+        
+            &__link-three{
+                transition: var(--all-transitions);
+                animation: redes-animation 1s ease-in-out -0.5s infinite alternate;
+            }
+        }
+
+        &-navegation{
+            font-size: 1.25rem;
+
+            @include desktop(){
+                font-size: 1.5rem;
+            }
+
+            &__menu-list{
+                @include d-flex-fd-ai-jc-g(column, stretch, stretch, 0.5rem);
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            &__menu-name{
+                font-size: 1.2rem;
+
+                @include desktop(){
+                    color: var(--secondary-theme-color);
+                    font-size: 2rem;
+                }
+            }
+
+            &__menu-list{
+                @include desktop(){
+                    flex-direction: row;
+                    gap: 2rem;
+                }
+            }
+
+            &__checkbox{
+                display: none;
+
+                &:checked+.footer-nav-navegation__link-list{
+                    display: none;
+
+                    @include desktop(){
+                        display: flex;
+                    }
+                }
+            }
+
+            &__link-list{
+                @include d-flex-fd-ai-jc-g(column, stretch, stretch, 0.5rem);
+                list-style: none;
+                padding: 0.5em;
+                background-color: var(--primary-shadow-color);
+                border-radius: var(--border-radius);
+
+                @include desktop(){
+                    background-color: transparent;
+                    padding: 0.5em 0;
+                }
+            }
+
+            &__link{
+                text-decoration: none;
+                color: var(--text-color);
+                cursor: pointer;
+            }
+
+            &__link-header{
+                color: var(--secondary-theme-color);
+            }
+        }
+    }
+}
