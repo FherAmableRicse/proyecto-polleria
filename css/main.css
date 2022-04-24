@@ -1,3 +1,60 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    background-image: url("/img/leña-fondo.jpg");
+   
+  }
+  .about__message {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  @media (min-width: 854px) {
+    .about__message {
+      text-align: start;
+      gap: 2rem;
+    }
+  }
+  .about__message-title {
+    font-weight: 800;
+    margin: 0;
+  }
+  .about__message-subtitle {
+    font-weight: 400;
+    margin: 0;
+  }
+  .about__message-paragraph {
+    font-weight: 300;
+    margin: 0;
+    text-align: justify;
+  }
+
+  .about__phrase {
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+  }
+ 
+ 
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1024px;
+    margin: auto;
+    padding: var(--padding-container);
+  }
 
 .menu__container {
     display: flex;
@@ -59,6 +116,28 @@
 }
 
 @media (min-width: 854px) {
+    .about-container {
+        display: flex;
+        gap: 2rem;
+        margin: auto;
+    }
+    .about__message-title {
+        font-weight: 800;
+        margin: 0;
+        text-align: center;
+          }
+
+    .about__message-subtitle {
+        font-weight: 400;
+        margin: 0;
+        text-align: center;
+          }
+    .about__phrase {
+        font-weight: 700;
+        font-size: 25px;
+        margin: 0;
+        text-align: center;
+    }
     .main__publicity-image {
         display: flex;
         margin: 0 2rem;
@@ -68,4 +147,5 @@
     .menu__container {
         margin-top: 10rem;
     }
+    
 }

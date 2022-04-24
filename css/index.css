@@ -4,7 +4,6 @@
 /* @import url(./footer.css); */
 @import url(./sassfooter.css);
 @import url(./section.css);
-
 .body {
 
     background-image: linear-gradient(var(--primary-gradient-color), var(--secondary-gradient-color));
