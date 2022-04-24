@@ -1,10 +1,10 @@
 .header {
   position: fixed;
-  z-index: 100;
   top: 0;
+  z-index: 100;
   left: 0;
   width: 100%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--font-header-footer);
 
 }
 
@@ -27,12 +27,12 @@
   align-items: center;
   justify-content:space-between;
   max-width: var(--max-width-container);
-  margin: 0.5em;
   padding: var(--padding-container);
 }
 
   .header-nav__link-logo-container {
     display: flex;
+    margin-bottom: 0.5em;
     height: 5rem;
     border-radius: 50%;
     overflow: hidden;
@@ -73,7 +73,7 @@
 
 .header-nav__menu-link-list {
   position: fixed;
-  top: 4rem;
+  top: 5.5rem;
   left: 100%;
   width: 100%;
   height: calc(100% - 4rem);
