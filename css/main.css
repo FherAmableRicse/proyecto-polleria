@@ -1,3 +1,7 @@
+.main__carrousel{
+  margin-top: 5rem;
+}
+
 .about {
     display: flex;
     flex-direction: row;
@@ -123,6 +127,7 @@
     }
     .about__message-title {
         font-weight: 800;
+        font-size: 30px;
         margin: 0;
         text-align: center;
           }
@@ -131,6 +136,12 @@
         font-weight: 400;
         margin: 0;
         text-align: center;
+          }
+    .about__message-paragraph {
+            font-weight: 300;
+            font-size: 20px;
+            margin: 0;
+            text-align: justify;
           }
     .about__phrase {
         font-weight: 700;

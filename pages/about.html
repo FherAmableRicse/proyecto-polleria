@@ -18,8 +18,8 @@
     <header class="bg-secondary text-light mask">
       <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
             <div class="container py-2 lead">
-                <a class="navbar-brand bg-image hover-zoom" href="/index.html">
-                    <img class="rounded-circle" src="/img/logo.png" alt="Logo-Polleria" width="60">
+                <a class="header-nav__link-logo-container" href="/index.html">
+                    <img class="header-nav__link-logo" src="/img/logo.png" alt="Logo-Polleria">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -55,109 +55,49 @@
         </nav>
     </header>
 <main class="main">
-  <section id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  <section class="main__carrousel">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img src="/img/about1.png" class="d-block w-100" alt="Foto Conformación Empresa">
+          <div class="carousel-caption d-none d-md-block bg-dark p-2 text-light bg-opacity-25">
+            <h5>CONFORMACIÓN DE LA EMPRESA</h5>
+            <p>En la Ciudad de Huancayo se realizó la conformación de la Empresa con razon social "POLLO REAL"</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="/img/about2.png" class="d-block w-100"
+            alt="Foto desfile Aniversario">
+          <div class="carousel-caption d-none d-md-block bg-dark p-2 text-light bg-opacity-25">
+            <h5>DESFILE DE PRIMER ANIVERSARIO</h5>
+            <p>Durante el primer año de funcionamiento de Nuestra pollería, se realizó el primer desfile de aniversario.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="/img/about3.png" class="d-block w-100" alt="Foto grupo de Delivery">
+          <div class="carousel-caption d-none d-md-block bg-dark p-2 text-light bg-opacity-25">
+            <h5>PRIMER GRUPO DE DELIVERY EN LA REGIÓN</h5>  
+            <p>Dentro de nuestros servicios fuimos el primero en brindar DELIVERY en la región</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="5000">
-        <img src="https://wallpaperaccess.com/full/33270.jpg" class="d-block w-100" alt="Anime">
-        <div class="carousel-caption d-none d-md-block bg-dark p-2 text-light bg-opacity-25">
-          <h5>First slide label</h5>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#anime1">
-            Launch static backdrop modal
-          </button>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
-        <div class="modal fade text-dark" id="anime1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="anime1">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...1
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="5000">
-        <img src="https://www.xtrafondos.com/wallpapers/naruto-en-juego-jump-force-3604.jpg" class="d-block w-100"
-          alt="Anime">
-        <div class="carousel-caption d-none d-md-block bg-dark p-2 text-light bg-opacity-25">
-          <h5>Second slide label</h5>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#anime2">
-            Launch static backdrop modal
-          </button>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
-        <div class="modal fade text-dark" id="anime2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="anime2">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...2
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="5000">
-        <img src="https://wallpaper.dog/large/10865168.jpg" class="d-block w-100" alt="Anime">
-        <div class="carousel-caption d-none d-md-block bg-dark p-2 text-light bg-opacity-25">
-          <h5>Third slide label</h5>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#anime3">
-            Launch static backdrop modal
-          </button>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-        <div class="modal fade text-dark" id="anime3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="anime3">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...3
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </section>
+
   <article class="about">
     <div class="about-container">
       <div class="about__message">
