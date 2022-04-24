@@ -130,6 +130,10 @@
     display: none;
   }
 
+  .header-nav{
+    margin: 0;
+  }
+
   .header-nav__containersuperior {
     display: flex;
     align-items: center;
