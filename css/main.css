@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 7rem;
     gap: 0.5rem;
 }
 
@@ -57,14 +58,14 @@
     display: none;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 854px) {
     .main__publicity-image {
         display: flex;
         margin: 0 2rem;
-        width: 28.125rem;
+        width: 20rem;
     }
 
     .menu__container {
-        margin: 3rem;
+        margin-top: 10rem;
     }
 }
