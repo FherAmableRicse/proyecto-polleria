@@ -88,13 +88,13 @@
     border-radius: var(--border-radius);
 }
 
-.footer-nav-navegacion__link{
+.footer-nav-navegation__link{
     text-decoration: none;
     color: var(--text-color);
     cursor: pointer;
 }
 
-.footer-nav-navegacion__link-header{
+.footer-nav-navegation__link-header{
     color: var(--secondary-theme-color);
 }
 

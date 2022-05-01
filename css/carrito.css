@@ -1,0 +1,97 @@
+@import url(./variables.css);
+
+:root {
+    --main-text-color: #000000;
+    --main-shadow-color: #ffffff;
+    /* --secondary-theme-color: #ff0000; */
+    --primary-gradient-color: #c4c5c7;
+    --secondary-gradient-color: #ebebeb;
+    --primary-theme-color: #8b5d3e;
+    --secondary-theme-color: #b99d73;
+    --text-color: #fff;
+    --primary-shadow-color: #867e7e88;
+    --primary-highlight: #eccb0c;
+    --secondary-highlight: #ffd700;
+    --primary-highlight-color: #ff0000;
+    --secondary-highlight-color: #ffd700;
+    --pading-section: 2em 0;
+    --padding-container: 0 2em;
+    --max-width-container: 1920px;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+    --button-color: #ffffff;
+    /* --button-color-active: #fff; */
+    --button-text-color: #000;
+    --font-main: 'Ultra', serif;
+    --font-header-footer: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.buscador{
+    padding: var(--pading-section);
+}
+
+.buscador__container{
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-container);
+    gap: 1rem;
+    max-width: var(--max-width-container);
+}
+
+.buscador__input{
+    max-width: 20rem;
+}
+
+.buscador__resultados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.buscador__plato{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 0.125rem solid var(--main-text-color);
+    padding: 1em;
+    align-items: center;
+}
+
+.buscador__plato-image-container{
+    display: flex;
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    align-items: center;
+}
+
+.buscador__plato-image{
+    width: 100%;
+}
+
+.buscador__plato-title{
+    margin: 0;
+}
+
+.buscador__plato-precio{
+    margin: 0;
+}
+
+.buscador__plato-boton{
+    width: fit-content;
+}
+
+@media(min-width:854px){
+    .buscador__resultados{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        max-width: var(--max-width-container);
+        margin: 0;
+        padding: 0;
+    }
+}
