@@ -1,0 +1,138 @@
+.contact {
+    padding: 3em 0 1em;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact__form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.contact__form-item {
+    padding: 1rem 1rem;
+    text-align: start;
+}
+
+.contact__title {
+    font-size: 1.8rem;
+    color: var(--primary-highlight-color);
+    text-shadow: 0 0 0.25rem var(--secondary-highlight);
+    margin: 0;
+}
+
+.contact__form-textArea {
+    width: 25rem;
+    height: 6.25rem;
+
+}
+
+.contact__form-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.contact__form-button {
+    background-color: var(--primary-highlight-color);
+
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: var(--all-transitions);
+}
+
+.contact__form-button:hover {
+    transform: scale(1.025);
+}
+
+.contact__form-image-container {
+    display: none;
+}
+
+.warnings {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    color: var(--primary-highlight);
+    text-shadow:
+        0 0 0.125rem var(--primary-highlight-color),
+        0 0 0.25rem var(--primary-highlight-color);
+}
+
+
+@media (min-width: 854px) {
+    .contact {
+        padding: 10em 0 1em;
+    }
+
+    .contact__form-image-container {
+
+        display: flex;
+        max-width: 456px;
+        margin: 0;
+    }
+
+    .contact__form-image {
+
+        width: 100%;
+        height: 96%;
+        transition: var(--all-transitions);
+    }
+
+    .contact__container {
+        margin: auto;
+    }
+
+    .contact__form {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .contact__form-item {
+        padding: 1.5rem 2rem;
+        text-align: start;
+    }
+
+    .contact__title {
+        font-size: 2rem;
+    }
+
+    .conctact__form-item--area {
+        resize: none;
+        text-align: start;
+    }
+
+    .contact__form-button {
+        padding: 1rem 4rem;
+    }
+
+    .contact__form-inputs {
+        gap: 0.5rem;
+    }
+}
