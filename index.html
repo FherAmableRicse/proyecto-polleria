@@ -46,21 +46,21 @@
                 <ul class="header-nav__menu-link-list">
                     <li class="header-nav__menu-link-item">
 
-                        <a href="#"
-                        class="header-nav__menu-link header-nav__menu-link--active" target="_blank"
-                        rel="noopener noreferrer">INICIO</a>
+                        <a href="#" class="header-nav__menu-link header-nav__menu-link--active" target="_blank"
+                            rel="noopener noreferrer">INICIO</a>
                     </li>
                     <li class="header-nav__menu-link-item">
-                        <a href="#" class="header-nav__menu-link">EMPIEZA TU PEDIDO</a>
+                        <a href="./carrito.html" class="header-nav__menu-link">EMPIEZA TU PEDIDO</a>
                     </li>
                     <li class="header-nav__menu-link-item">
-                        <a href="./pages/about.html" class="header-nav__menu-link">NOSOTROS (BOOTSTRAP)</a>
+                        <a href="./pages/about.html" class="header-nav__menu-link" target="_blank"
+                            rel="noopener noreferrer">NOSOTROS (BOOTSTRAP)</a>
                     </li>
                     <li class="header-nav__menu-link-item">
                         <a href="#" class="header-nav__menu-link">LOCALES</a>
                     </li>
                     <li class="header-nav__menu-link-item">
-                        <a href="#" class="header-nav__menu-link">CONTÁCTENOS</a>
+                        <a href="#contacto" class="header-nav__menu-link">CONTÁCTENOS</a>
                     </li>
 
                     </li>
@@ -116,6 +116,31 @@
             </div>
             <img src="./img/parrilla-p.png" alt="imagen carne parrilla" class="main__publicity-image">
         </div>
+
+        <section class="contact" id="contacto">
+            <div class="contact__container">
+                <h2 class="contact__title">CONTÁCTENOS</h2>
+                <form action="" id="formContact" class="contact__form">
+                    <div class="contact__form-inputs">
+                        <input id="name" class="contact__form-item" type="text" placeholder="Nombre" />
+                        <input id="apellido" class="contact__form-item" type="text" placeholder="Apellido" />
+                        <input id="email" class="contact__form-item" type="email" placeholder="Email" />
+                        <input id="celular" class="contact__form-item" type="text" placeholder="Celular" />
+                        <textarea id="area" class="contact__form-item conctact__form-item--area"
+                            placeholder="Escribenos..."></textarea>
+                        <div class="contact__form-button-container">
+                            <button type="submit" class="contact__form-button">Enviar</button>
+                            <p class="warnings" id="warnings"></p>
+                        </div>
+                    </div>
+                    <figure class="contact__form-image-container">
+                        <img class="contact__form-image" src="./img/Pollo_Picom_Contactenos.png" alt="Logo Contacto">
+                    </figure>
+                </form>
+            </div>
+
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -182,7 +207,7 @@
             </nav>
         </div>
     </footer>
-
+    <script src="./contact.js"></script>
 </body>
 
 </html>
