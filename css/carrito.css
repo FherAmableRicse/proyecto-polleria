@@ -85,10 +85,14 @@
     width: fit-content;
 }
 
+.row{
+    display: flex;
+}
+
 @media(min-width:854px){
     .buscador__resultados{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
         max-width: var(--max-width-container);
         margin: 0;
