@@ -129,6 +129,7 @@ const documentReady = () => {
 
 
     buscadorInput.addEventListener('keyup',buscarPlato);
+
 }
         
 document.addEventListener('DOMContentLoaded', documentReady);
