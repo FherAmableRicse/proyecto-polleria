@@ -9,32 +9,30 @@
 		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/carrito.css">
 </head>
-
-<body>
+<body class="body">
 	<div class="container">
-		<section>
-			<div class="row">
-						<div class="col-sm-4">
-							<h2>Carrito</h2>
-							<ul id="carrito" class="list-group"></ul>
-							<hr>
-							<p class="text-right">Total: S/<span id="total"></span></p>
-							<button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-						</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<div>
+					<h2>Carta</h2>
+				</div>
+				<div class="buscador__container">
+					<input type="text" class="buscador__input" placeholder="Ingrese su plato" id="buscadorInput" required/>
+					<div class="buscador__resultados" id="buscadorResultados">
 					</div>
-		</section>
-
-		<section class="buscador">
-			<div class="buscador__container">
-				<input type="text" class="buscador__input" placeholder="Ingrese su plato" id="buscadorInput" required />
-				<div class="buscador__resultados" id="buscadorResultados">
 				</div>
 			</div>
-		</section>
-
+			<div class="col-sm-4">
+				<h2 class="col-sm-4__title">Carrito</h2>
+						<ul id="carrito" class="list-group"></ul>
+						<hr>
+						<p class="text-right">Total: S/.<span id="total"></span></p>
+						<button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+			</div>
+		</div>
 	</div>
-
-	<script src="./js/carrito.js" type="module"></script>
+	
+<script src="./js/carrito.js" type="module"></script>
 </body>
 
 </html>

@@ -148,7 +148,8 @@ const documentReady = () => {
     asignarBotones(botones, platosBuscados);
   };
 
-  buscadorInput.addEventListener("keyup", buscarPlato);
-};
+    buscadorInput.addEventListener('keyup',buscarPlato);
 
-document.addEventListener("DOMContentLoaded", documentReady);
+}
+        
+document.addEventListener('DOMContentLoaded', documentReady);
