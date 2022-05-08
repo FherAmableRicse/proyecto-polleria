@@ -23,16 +23,25 @@ const documentReady = () => {
     return total;
   }
 
-    const mostrarPlatos = (platosMostrar) => {
-        for (let i = 0; i < platosMostrar.length; i++) {
-            buscadorResultados.innerHTML += `
+  const mostrarPlatos = (platosMostrar) => {
+    for (let i = 0; i < platosMostrar.length; i++) {
+      const {imagen,nombre,precio,id}=platosMostrar[i];
+      buscadorResultados.innerHTML += `
             <div class="buscador__plato">
             <figure class="buscador__plato-image-container">
-            <img src="${platosMostrar[i].imagen}" alt="${platosMostrar[i].nombre}"
+            <img src="${imagen}" alt="${
+        nombre
+      }"
                 class="buscador__plato-image" />
             </figure>
-            <h3 class="buscador__plato-title" id="platoTitle">${platosMostrar[i].nombre}</h3>
-            <h3 class="buscador__plato-precio">${platosMostrar[i].precio.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}</h3>
+            <h3 class="buscador__plato-title" id="platoTitle">${
+              nombre
+            }</h3>
+            <h3 class="buscador__plato-precio">${precio.toLocaleString("es-PE", {
+              style: "currency",
+              currency: "PEN",
+              minimumFractionDigits: 2,
+            })}</h3>
             <button type="button" class="buscador__plato-boton" id="${i}">Agregar</button>
             </div>
             `;
@@ -68,7 +77,13 @@ const documentReady = () => {
       // Creamos el nodo del item del carrito
       const miNodo = document.createElement("li");
       miNodo.classList.add("list-group-item", "text-right", "mx-2");
-      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} ${miItem[0].precio.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}`;
+      miNodo.textContent = `${numeroUnidadesItem} x ${
+        miItem[0].nombre
+      } ${miItem[0].precio.toLocaleString("es-PE", {
+        style: "currency",
+        currency: "PEN",
+        minimumFractionDigits: 2,
+      })}`;
       // Boton de borrar
       const miBoton = document.createElement("button");
       miBoton.classList.add("btn", "btn-danger", "mx-1");
@@ -93,8 +108,8 @@ const documentReady = () => {
   }
 
   function calcularTotal() {
-    let precios=[];
-    carrito.forEach((item)=>{
+    let precios = [];
+    carrito.forEach((item) => {
       precios.push(item.precio);
     });
 
