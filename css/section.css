@@ -76,7 +76,7 @@
 
     .section__figure-image:nth-child(1) {
         grid-area: item1;
-        transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 0.25s
     }
 
     .section__figure-image:nth-child(1):hover {
@@ -88,7 +88,7 @@
 
     .section__figure-image:nth-child(2) {
         grid-area: item2;
-        transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 0.25s;
     }
 
     .section__figure-image:nth-child(2):hover {
@@ -100,7 +100,7 @@
 
     .section__figure-image:nth-child(3) {
         grid-area: item3;
-        transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 0.25s;
         height: 100%;
     }
 
@@ -113,7 +113,7 @@
 
     .section__figure-image:nth-child(4) {
         grid-area: item4;
-        transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 0.25s;
     }
 
     .section__figure-image:nth-child(4):hover {
@@ -126,7 +126,7 @@
     .section__figure-image:nth-child(5) {
         grid-area: item5;
         height: 100%;
-        transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 0.25s;
     }
 
     .section__figure-image:nth-child(5):hover {
@@ -140,7 +140,7 @@
     .section__figure-image:nth-child(6) {
         grid-area: item6;
         height: 100%;
-        transition: all ease-in-out 0.5s;
+        transition: all ease-in-out 0.25s;
     }
 
     .section__figure-image:nth-child(6):hover {
