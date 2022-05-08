@@ -43,7 +43,7 @@
 }
 
 .dashboards {
-  padding: 8rem 0;
+  padding: 10rem 0;
 }
 
 .dashboards__container {
@@ -51,14 +51,16 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  max-width: var(--max-width-container);
+  /* max-width: var(--max-width-container); */
   margin: auto;
-  padding: var(--padding-container);
+  padding: 0 10rem;
 }
 
 .dashboards__title {
   font-size: 2rem;
-  text-shadow: 0 0 0.25rem var(--primary-highlight-color);
+  text-decoration: underline;
+  color: var(--primary-highlight-color);
+  text-shadow: 0 0 0.125rem var(--primary-highlight-color);
   margin: 0;
 }
 
@@ -79,5 +81,7 @@
 }
 
 .dashboard-models__chart {
+  width: 400px; 
+  height: 400px;
   width: 100%;
 }
