@@ -16,6 +16,14 @@ const documentReady = () => {
   let carrito = [];
   const divisa = "S/.";
 
+  function sumarRest(...itemsSumar) {
+    let total = 0;
+    for (const num of itemsSumar) {
+      total += num;
+    }
+    return total;
+  }
+
   const mostrarPlatos = (platosMostrar) => {
     for (let i = 0; i < platosMostrar.length; i++) {
       buscadorResultados.innerHTML += `
@@ -25,7 +33,7 @@ const documentReady = () => {
                 class="buscador__plato-image" />
             </figure>
             <h3 class="buscador__plato-title" id="platoTitle">${platosMostrar[i].nombre}</h3>
-            <h3 class="buscador__plato-precio">S/. ${platosMostrar[i].precio}</h3>
+            <h3 class="buscador__plato-precio">${platosMostrar[i].precio.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}</h3>
             <button type="button" class="buscador__plato-boton" id="${i}">Agregar</button>
             </div>
             `;
@@ -61,10 +69,10 @@ const documentReady = () => {
       // Creamos el nodo del item del carrito
       const miNodo = document.createElement("li");
       miNodo.classList.add("list-group-item", "text-right", "mx-2");
-      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} ${divisa} ${miItem[0].precio}`;
+      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} ${miItem[0].precio.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 })}`;
       // Boton de borrar
       const miBoton = document.createElement("button");
-      miBoton.classList.add("btn", "btn-danger", "mx-5");
+      miBoton.classList.add("btn", "btn-danger", "mx-1");
       miBoton.textContent = "X";
       miBoton.style.marginLeft = "1rem";
       miBoton.dataset.item = item.id;
@@ -86,17 +94,12 @@ const documentReady = () => {
   }
 
   function calcularTotal() {
-    // Recorremos el array del carrito
-    return carrito
-      .reduce((total, item) => {
-        // De cada elemento obtenemos su precio
-        const miItem = platos.filter((itemBaseDatos) => {
-          return itemBaseDatos.id === parseInt(item.id);
-        });
-        // Los sumamos al total
-        return total + miItem[0].precio;
-      }, 0)
-      .toFixed(2);
+    let precios=[];
+    carrito.forEach((item)=>{
+      precios.push(item.precio);
+    });
+
+    return sumarRest(...precios);
   }
 
   function vaciarCarrito() {
