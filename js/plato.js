@@ -1,6 +1,5 @@
 export class Plato {
   static idProducto = 0;
-
   _id;
   _nombre;
   _precio;
