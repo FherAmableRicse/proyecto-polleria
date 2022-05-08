@@ -3,7 +3,7 @@ export const contact = () => {
     const contacto = document.getElementById('contacto');
     const contactForm = document.getElementById('formContact');
 
-    const enviar = e => {
+    const enviar = (e) => {
         e.preventDefault();
 
         const formNombre = document.getElementById('name').value;
