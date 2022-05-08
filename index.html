@@ -5,23 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <title>Pollo PICOM - Woodfire Grill & Chicken </title>
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Ultra&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 
 
 <body class="body">
     <header class="header">
         <nav class="header-nav">
-            <div class="header-nav__containersuperior">
+            <div class="header-nav__container-superior">
                 <ul class="header-nav__menu-link-list">
                     <li class="header-nav__menu-link-item">
                         <p>🍗Atención desde: 12:00hrs</p>
@@ -54,7 +52,7 @@
                     </li>
                     <li class="header-nav__menu-link-item">
                         <a href="./pages/about.html" class="header-nav__menu-link" target="_blank"
-                            rel="noopener noreferrer" rel="noopener noreferrer">NOSOTROS (BOOTSTRAP)</a>
+                            rel="noopener noreferrer">NOSOTROS</a>
                     </li>
                     <li class="header-nav__menu-link-item">
                         <a href="#" class="header-nav__menu-link">LOCALES</a>
@@ -62,7 +60,9 @@
                     <li class="header-nav__menu-link-item">
                         <a href="#contacto" class="header-nav__menu-link">CONTÁCTENOS</a>
                     </li>
-
+                    <li class="header-nav__menu-link-item">
+                        <a href="./statistics.html" class="header-nav__menu-link">REPORTES</a>
+                    </li>
                     </li>
 
                 </ul>
@@ -73,19 +73,19 @@
     <main class="main">
         <div class="main__conteiner">
             <div class="menu__container">
-                <a href="" class="menu__link"><img src="./img/menu-promociones.png" alt="imagen promocion"
+                <a href="#" class="menu__link"><img src="./img/menu-promociones.png" alt="imagen promocion"
                         class="menu__image"><span class="menu__text">PROMOCIONES</span></a>
-                <a href="" class="menu__link"><img src="./img/menu-pollo.jpg" alt="imagen pollo"
+                <a href="#" class="menu__link"><img src="./img/menu-pollo.jpg" alt="imagen pollo"
                         class="menu__image"><span class="menu__text">POLLO</span></a>
-                <a href="" class="menu__link"><img src="./img/menu-piqueos.jpg" alt="imagen piqueos"
+                <a href="#" class="menu__link"><img src="./img/menu-piqueos.jpg" alt="imagen piqueos"
                         class="menu__image"><span class="menu__text">PIQUEOS</span></a>
-                <a href="" class="menu__link"><img src="./img/menu-parrilla.jpg" alt="imagen parrillas"
+                <a href="#" class="menu__link"><img src="./img/menu-parrilla.jpg" alt="imagen parrillas"
                         class="menu__image"><span class="menu__text">PARRILLLAS</span></a>
-                <a href="" class="menu__link"><img src="./img/menu-guarniciones.jpg" alt="imagen guarniciones"
+                <a href="#" class="menu__link"><img src="./img/menu-guarniciones.jpg" alt="imagen guarniciones"
                         class="menu__image"><span class="menu__text">GUARDICIONES</span></a>
-                <a href="" class="menu__link"><img src="./img/menu-ensalada.jpg" alt="imagen ensalada"
+                <a href="#" class="menu__link"><img src="./img/menu-ensalada.jpg" alt="imagen ensalada"
                         class="menu__image"><span class="menu__text">ENSALADAS</span></a>
-                <a href="" class="menu__link"><img src="./img/menu-bebidas.jpg" alt="imagen bebidas"
+                <a href="#" class="menu__link"><img src="./img/menu-bebidas.jpg" alt="imagen bebidas"
                         class="menu__image"><span class="menu__text">BEBIDAS</span></a>
             </div>
 
@@ -130,7 +130,6 @@
                             placeholder="Escribenos..."></textarea>
                         <div class="contact__form-button-container">
                             <button type="submit" class="contact__form-button">Enviar</button>
-                            <p class="warnings" id="warnings"></p>
                         </div>
                     </div>
                     <figure class="contact__form-image-container">
@@ -140,7 +139,6 @@
             </div>
 
         </section>
-
     </main>
 
     <footer class="footer">
@@ -207,7 +205,10 @@
             </nav>
         </div>
     </footer>
-    <script src="/js/contact.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/index.js" type="module"></script>
+
 </body>
 
 </html>

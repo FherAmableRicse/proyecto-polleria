@@ -11,34 +11,35 @@
 .header-nav {
   padding: 0;
   margin: 0;
-  background-color:var(--primary-theme-color);
+  background-color: var(--primary-theme-color);
 }
 
-.header-nav__containersuperior {
+.header-nav__container-superior {
   display: none;
 }
 
-.header-nav__register-link{
-    display:none;
+.header-nav__register-link {
+  display: none;
 }
 
 .header-nav__container {
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   max-width: var(--max-width-container);
   padding: var(--padding-container);
 }
 
-  .header-nav__link-logo-container {
-    display: flex;
-    margin-bottom: 0.5em;
-    height: 5rem;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: var(--all-transitions);
+.header-nav__link-logo-container {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5em;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: var(--all-transitions);
 
-  }
+}
 
 
 .header-nav__link-logo-container:hover {
@@ -84,8 +85,8 @@
   gap: 2rem;
   margin: 0;
   padding: 0;
-  background-color:var(--secondary-theme-color);
-  list-style:none;
+  background-color: var(--secondary-theme-color);
+  list-style: none;
   transition: var(--all-transitions);
 }
 
@@ -130,21 +131,21 @@
     display: none;
   }
 
-  .header-nav{
+  .header-nav {
     margin: 0;
   }
 
-  .header-nav__containersuperior {
+  .header-nav__container-superior {
     display: flex;
     align-items: center;
     background-color: rgb(210, 30, 30);
-    justify-content:space-between;
+    justify-content: space-between;
     max-width: var(--max-width-container);
     padding: 0 0.5em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
   }
 
-  .header-nav__register-link{
+  .header-nav__register-link {
     display: flex;
     background-color: var(--button-color);
     border-radius: var(--border-radius);
@@ -154,7 +155,7 @@
     margin: 0;
     padding: 0.5em 1em;
     transition: var(--all-transitions);
-}
+  }
 
   .header-nav__menu-link-list {
     position: static;
