@@ -7,7 +7,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 2rem;
     max-width: var(--max-width-container);
     margin: auto;
@@ -27,7 +26,7 @@
 }
 
 .contact__form-item {
-    padding: 1rem 1rem;
+    padding: 1rem 1.5rem;
     text-align: start;
 }
 
@@ -71,16 +70,6 @@
 
 .contact__form-image-container {
     display: none;
-}
-
-.warnings {
-    width: 100%;
-    text-align: center;
-    margin: auto;
-    color: var(--primary-highlight);
-    text-shadow:
-        0 0 0.125rem var(--primary-highlight-color),
-        0 0 0.25rem var(--primary-highlight-color);
 }
 
 

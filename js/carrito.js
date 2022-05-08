@@ -1,19 +1,19 @@
 'use strict';
-import {platos} from "../js/platos.js"
+import { platos } from "../js/platos.js"
 
 const documentReady = () => {
 
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-    const buscadorInput=document.getElementById('buscadorInput');
-    const buscadorResultados=document.getElementById('buscadorResultados');
-    let carrito=[];
+    const buscadorInput = document.getElementById('buscadorInput');
+    const buscadorResultados = document.getElementById('buscadorResultados');
+    let carrito = [];
     const divisa = 'S/.';
 
-    const mostrarPlatos=(platosMostrar)=>{
-        for(let i=0;i<platosMostrar.length;i++){
-            buscadorResultados.innerHTML+=`
+    const mostrarPlatos = (platosMostrar) => {
+        for (let i = 0; i < platosMostrar.length; i++) {
+            buscadorResultados.innerHTML += `
             <div class="buscador__plato">
             <figure class="buscador__plato-image-container">
             <img src="${platosMostrar[i].imagen}" alt="${platosMostrar[i].nombre}"
@@ -27,9 +27,10 @@ const documentReady = () => {
         }
     }
 
-    const asignarBotones=(botones,platosBuscados)=>{
-        for(let i=0;i<botones.length;i++){
-            botones[i].addEventListener('click',()=>{
+
+    const asignarBotones = (botones, platosBuscados) => {
+        for (let i = 0; i < botones.length; i++) {
+            botones[i].addEventListener('click', () => {
                 carrito.push(platosBuscados[i]);
                 renderizarCarrito();
             });
@@ -76,7 +77,7 @@ const documentReady = () => {
         const id = e.target.dataset.item;
         carrito = carrito.filter((carritoId) => {
             return carritoId.id !== parseInt(id);
-            
+
         });
         renderizarCarrito();
     }
@@ -99,36 +100,36 @@ const documentReady = () => {
         // Renderizamos los cambios
         renderizarCarrito();
     }
-    
+
     // Eventos
     DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
-    
+
 
     mostrarPlatos(platos);
-    let botones=document.getElementsByClassName('buscador__plato-boton');   
-    asignarBotones(botones,platos);
+    let botones = document.getElementsByClassName('buscador__plato-boton');
+    asignarBotones(botones, platos);
 
-    const buscarPlato=(e)=>{
-        buscadorResultados.innerHTML='';
+    const buscarPlato = (e) => {
+        buscadorResultados.innerHTML = '';
 
-        const platosBuscados=platos.filter((element)=>{
-            if(e.target.value.toLowerCase()===''){
+        const platosBuscados = platos.filter((element) => {
+            if (e.target.value.toLowerCase() === '') {
                 return platos;
-            }else{
+            } else {
                 return (element.nombre.toLowerCase().includes(e.target.value.toLowerCase()));
             }
         });
 
         mostrarPlatos(platosBuscados);
-        botones=document.getElementsByClassName('buscador__plato-boton');
-        asignarBotones(botones,platosBuscados);
+        botones = document.getElementsByClassName('buscador__plato-boton');
+        asignarBotones(botones, platosBuscados);
 
     };
 
 
 
-    buscadorInput.addEventListener('keyup',buscarPlato);
+    buscadorInput.addEventListener('keyup', buscarPlato);
 }
-        
+
 document.addEventListener('DOMContentLoaded', documentReady);
