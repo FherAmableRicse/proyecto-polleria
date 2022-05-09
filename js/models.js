@@ -48,15 +48,13 @@ export const models = () => {
         data: {
             labels: etiquetasChart2,
             datasets: [datosVentas2021,datosVentas2022]},
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-                },
-            }
+            options:{
+                plugins:{
+                legend:{
+                position: 'bottom'
+                }
+                    }
+                }
         });
     new Chart(dashboardModel03, {
         type: 'polarArea',

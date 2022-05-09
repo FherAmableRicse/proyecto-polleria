@@ -27,7 +27,7 @@
 }
 
 .header-statistics__title-logo {
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--primary-highlight-color);
   margin: 0;
   transition: var(--all-transitions);
@@ -83,9 +83,8 @@
 }
 
 .dashboard-models__chart {
-  width: 17rem;
-  height: 17rem;
-  padding: 1rem;
+  width: 22rem;
+  height: 22rem;
 
 }
 
@@ -93,7 +92,9 @@
   .dashboard-models__chart{
     width: 100%;
   }
-
+  .header-statistics__title-logo {
+  font-size: 2rem;
+  }
   .dashboards__title{
     font-size: 3rem;
   }
