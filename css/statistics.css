@@ -35,7 +35,7 @@
 
 .header-statistics__title-logo:hover {
   text-shadow:
-    0 0 0.0625rem var(--secondary-highlight-color);
+    0 0 0.5rem var(--secondary-highlight-color);
 }
 
 .main-statistics {
@@ -60,7 +60,7 @@
   font-size: 2rem;
   text-decoration: underline;
   color: var(--primary-highlight-color);
-  text-shadow: 0 0 0.125rem var(--primary-highlight-color);
+  text-shadow: 0 0 0.5rem var(--secondary-highlight-color);
   margin: 0;
 }
 
@@ -92,5 +92,9 @@
 @media (min-width: 854px) {
   .dashboard-models__chart{
     width: 100%;
+  }
+
+  .dashboards__title{
+    font-size: 3rem;
   }
 }
