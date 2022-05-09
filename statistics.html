@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pollo PICOM - Estadísticas </title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" /> -->
   <link rel="stylesheet" href="./css/index.css" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 </head>
-
 <body class="body-statistics">
   <header class="header-statistics">
     <div class="header-statistics__container">
@@ -25,14 +20,27 @@
   <main class="main-statistics">
     <section class="dashboards">
       <div class="dashboards__container">
-        <h2 class="dashboards__title">Gráficos</h2>
+        <h2 class="dashboards__title">GRÁFICOS</h2>
         <section class="dashboard-models">
             <div class="dashboard-models__container">
-                <h2 class="dashboard-models__title">Ventas por Sede</h2>
-                <canvas id="dashboardModel01" width="800" height="800" class="dashboard-models__chart"></canvas>
+                <h2 class="dashboard-models__title">Ventas por Año</h2>
+                <canvas id="dashboardModel01" class="dashboard-models__chart"></canvas>
             </div>
+
         </section>
-      </div>
+        <section class="dashboard-models">
+          <div class="dashboard-models__container">
+              <h2 class="dashboard-models__title">Ventas por Meses</h2>
+              <canvas id="dashboardModel02" class="dashboard-models__chart"></canvas>
+          </div>
+      </section>
+      <section class="dashboard-models">
+        <div class="dashboard-models__container">
+            <h2 class="dashboard-models__title">Ventas por Sedes</h2>
+            <canvas id="dashboardModel03" class="dashboard-models__chart"></canvas>
+        </div>
+    </section>
+      </div>  
     </section>
   </main>
   <footer class="footer">

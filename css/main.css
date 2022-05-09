@@ -71,9 +71,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 7rem;
-    gap: 0.5rem;
     margin-top: 10rem;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 /* Se uso para el contenido en BOOTSTRAP */
@@ -170,6 +170,7 @@
 
     .menu__container {
         margin-top: 10rem;
+        padding-top: 2rem;
     }
 
 }

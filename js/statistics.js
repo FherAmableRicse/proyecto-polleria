@@ -2,6 +2,7 @@
 
 import models from "./models.js";
 
+
 const documentReady = () =>{
 models();
 }
