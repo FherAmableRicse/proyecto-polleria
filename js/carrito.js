@@ -1,6 +1,6 @@
 "use strict";
 import { Plato } from "./plato.js";
-import { itemsMenu } from "./itemsMenu.js";
+import { itemsMenu } from "../utils/itemsMenu.js";
 
 const documentReady = () => {
   let platos = [];
@@ -13,7 +13,7 @@ const documentReady = () => {
   const DOMbotonVaciar = document.querySelector("#boton-vaciar");
   const buscadorInput = document.getElementById("buscadorInput");
   const buscadorResultados = document.getElementById("buscadorResultados");
-  let carrito = [];
+  let carritoCompra = [];
 
   function sumarRest(...itemsSumar) {
     let total = 0;
@@ -25,23 +25,21 @@ const documentReady = () => {
 
   const mostrarPlatos = (platosMostrar) => {
     for (let i = 0; i < platosMostrar.length; i++) {
-      const {imagen,nombre,precio,id}=platosMostrar[i];
+      const { imagen, nombre, precio, id } = platosMostrar[i];
       buscadorResultados.innerHTML += `
             <div class="buscador__plato">
             <figure class="buscador__plato-image-container">
-            <img src="${imagen}" alt="${
-        nombre
-      }"
+            <img src="${imagen}" alt="${nombre
+        }"
                 class="buscador__plato-image" />
             </figure>
-            <h3 class="buscador__plato-title" id="platoTitle">${
-              nombre
-            }</h3>
+            <h3 class="buscador__plato-title" id="platoTitle">${nombre
+        }</h3>
             <h3 class="buscador__plato-precio">${precio.toLocaleString("es-PE", {
-              style: "currency",
-              currency: "PEN",
-              minimumFractionDigits: 2,
-            })}</h3>
+          style: "currency",
+          currency: "PEN",
+          minimumFractionDigits: 2,
+        })}</h3>
             <button type="button" class="buscador__plato-boton" id="${i}">Agregar</button>
             </div>
             `;
@@ -51,7 +49,7 @@ const documentReady = () => {
   const asignarBotones = (botones, platosBuscados) => {
     for (let i = 0; i < botones.length; i++) {
       botones[i].addEventListener("click", () => {
-        carrito.push(platosBuscados[i]);
+        carritoCompra.push(platosBuscados[i]);
         renderizarCarrito();
       });
     }
@@ -61,7 +59,7 @@ const documentReady = () => {
     // Vaciamos todo el html
     DOMcarrito.textContent = "";
     // Quitamos los duplicados
-    const carritoSinDuplicados = [...new Set(carrito)];
+    const carritoSinDuplicados = [...new Set(carritoCompra)];
     // Generamos los Nodos a partir de carrito
     carritoSinDuplicados.forEach((item) => {
       // Obtenemos el item que necesitamos de la variable base de datos
@@ -70,20 +68,19 @@ const documentReady = () => {
         return itemBaseDatos.id === parseInt(item.id);
       });
       // Cuenta el número de veces que se repite el producto
-      const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+      const numeroUnidadesItem = carritoCompra.reduce((total, itemId) => {
         // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
         return itemId === item ? (total += 1) : total;
       }, 0);
-      // Creamos el nodo del item del carrito
+      // Creamos el nodo del item del carritoCompra
       const miNodo = document.createElement("li");
       miNodo.classList.add("list-group-item", "text-right", "mx-2");
-      miNodo.textContent = `${numeroUnidadesItem} x ${
-        miItem[0].nombre
-      } ${miItem[0].precio.toLocaleString("es-PE", {
-        style: "currency",
-        currency: "PEN",
-        minimumFractionDigits: 2,
-      })}`;
+      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre
+        } ${miItem[0].precio.toLocaleString("es-PE", {
+          style: "currency",
+          currency: "PEN",
+          minimumFractionDigits: 2,
+        })}`;
       // Boton de borrar
       const miBoton = document.createElement("button");
       miBoton.classList.add("btn", "btn-danger", "mx-1");
@@ -101,7 +98,7 @@ const documentReady = () => {
 
   function borrarItemCarrito(e) {
     const id = e.target.dataset.item;
-    carrito = carrito.filter((carritoId) => {
+    carritoCompra = carritoCompra.filter((carritoId) => {
       return carritoId.id !== parseInt(id);
     });
     renderizarCarrito();
@@ -109,7 +106,7 @@ const documentReady = () => {
 
   function calcularTotal() {
     let precios = [];
-    carrito.forEach((item) => {
+    carritoCompra.forEach((item) => {
       precios.push(item.precio);
     });
 
@@ -118,7 +115,7 @@ const documentReady = () => {
 
   function vaciarCarrito() {
     // Limpiamos los productos guardados
-    carrito = [];
+    carritoCompra = [];
     // Renderizamos los cambios
     renderizarCarrito();
   }
@@ -148,8 +145,8 @@ const documentReady = () => {
     asignarBotones(botones, platosBuscados);
   };
 
-    buscadorInput.addEventListener('keyup',buscarPlato);
+  buscadorInput.addEventListener('keyup', buscarPlato);
 
 }
-        
+
 document.addEventListener('DOMContentLoaded', documentReady);

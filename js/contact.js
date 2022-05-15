@@ -1,8 +1,7 @@
 
-export const contact = () => {
+const contact = () => {
     const contacto = document.getElementById('contacto');
     const contactForm = document.getElementById('formContact');
-
     const enviar = (e) => {
         e.preventDefault();
 
