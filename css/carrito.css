@@ -1,6 +1,7 @@
 @import url(./variables.css);
 
 .body {
+    margin-top: 7rem;
     background: slategrey;
     font-family: var(--font-header-footer);
 }
@@ -131,7 +132,7 @@
     .col-sm-4 {
         display: flex;
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 9rem;
         margin-bottom: 2rem;
         position: fixed;
         top: 0;
