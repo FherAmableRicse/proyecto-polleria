@@ -1,6 +1,7 @@
 "use strict";
 import { Plato } from "./plato.js";
 import { itemsMenu } from "../utils/itemsMenu.js";
+import { fetchApi } from "../utils/apiUtils.js";
 
 const documentReady = () => {
   let platos = [];
