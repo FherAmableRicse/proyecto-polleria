@@ -70,6 +70,7 @@ const documentReady = () => {
 
     function renderizarCarrito() {
       let carritoRender = JSON.parse(localStorage.getItem("itemsCarrito"));
+      carritoCompra=carritoRender;
       // Vaciamos todo el html
       DOMcarrito.textContent = "";
       // Quitamos los duplicados
@@ -129,6 +130,7 @@ const documentReady = () => {
       carritoCompra = carritoCompra.filter((carritoId) => {
         return carritoId.id !== parseInt(id);
       });
+      localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
       renderizarCarrito();
       //Actualizar local/sesion storage
     }
@@ -145,6 +147,7 @@ const documentReady = () => {
     function vaciarCarrito() {
       // Limpiamos los productos guardados
       carritoCompra = [];
+      localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
       // Renderizamos los cambios
       renderizarCarrito();
       //Actualizar local/sesion storage
