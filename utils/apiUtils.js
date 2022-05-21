@@ -1,11 +1,23 @@
-export const fetchApi = async (...urls) => {
+// export const fetchApi = async (...urls) => {
+//   try {
+//     const promises = urls.map(async (url) => {
+//       const response = await fetch(url, { method: "GET" });
+//       const data = await response.json();
+//       return data;
+//     });
+//     return Promise.all(promises);
+//   } catch (error) {
+//     return error;
+//   } finally {
+//   }
+// };
+
+export const fetchApi = async (url) => {
+  const inicio = performance.now();
   try {
-    const promises = urls.map(async (url) => {
-      const response = await fetch(url, { method: "GET" });
-      const data = await response.json();
-      return data;
-    });
-    return Promise.all(promises);
+    const response = await fetch(url, { method: "GET" });
+    const data = await response.json();
+    return data;
   } catch (error) {
     return error;
   } finally {
