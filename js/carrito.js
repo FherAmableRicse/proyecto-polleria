@@ -54,36 +54,50 @@ const documentReady = () => {
       for (let i = 0; i < botones.length; i++) {
         //Poner items en el carrito
         botones[i].addEventListener("click", () => {
-          carritoCompra.push(platosBuscados[i]);
-          renderizarCarrito();
-          localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
+          if(localStorage.getItem("itemsCarrito")){
+            carritoCompra=JSON.parse(localStorage.getItem("itemsCarrito"));
+            carritoCompra.push(platosBuscados[i]);
+            localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
+            renderizarCarrito();
+          }else{
+            carritoCompra.push(platosBuscados[i]);
+            localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
+            renderizarCarrito();
+          }
         });
       }
     };
 
     function renderizarCarrito() {
       let carritoRender = JSON.parse(localStorage.getItem("itemsCarrito"));
-      carritoRender = carritoRender.map((element) => {
-        const itemCarrito = new Plato({ element });
-        return itemCarrito;
-      });
-      console.log(carritoRender);
-      console.log(carritoCompra);
       // Vaciamos todo el html
       DOMcarrito.textContent = "";
       // Quitamos los duplicados
-      const carritoSinDuplicados = [...new Set(carritoRender)];
+      // const carritoSinDuplicados = [...new Set(carritoRender)];
+      const idsCarrito=carritoRender?.map((carritoItem)=>{
+        return carritoItem.id;
+      });
+      const idsSinDuplicados=[...new Set(idsCarrito)];
+      const carritoSinDuplicados=[];
+      idsSinDuplicados.forEach((id=>{
+        platos.forEach((plato)=>{
+          if(plato.id===id){
+            carritoSinDuplicados.push(plato);
+          }
+        });
+      }));
       // Generamos los Nodos a partir de carrito
       carritoSinDuplicados.forEach((item) => {
         // Obtenemos el item que necesitamos de la variable base de datos
         const miItem = platos.filter((itemBaseDatos) => {
           // ¿Coincide las id? Solo puede existir un caso
+
           return itemBaseDatos.id === parseInt(item.id);
         });
         // Cuenta el número de veces que se repite el producto
-        const numeroUnidadesItem = carritoCompra.reduce((total, itemId) => {
+        const numeroUnidadesItem = carritoRender.reduce((total, itemId) => {
           // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
-          return itemId === item ? (total += 1) : total;
+          return itemId.id === item.id ? (total += 1) : total;
         }, 0);
         // Creamos el nodo del item del carritoCompra
         const miNodo = document.createElement("li");
@@ -138,6 +152,7 @@ const documentReady = () => {
 
     // Eventos
     DOMbotonVaciar.addEventListener("click", vaciarCarrito);
+    renderizarCarrito();
 
     mostrarPlatos(platos);
     let botones = document.getElementsByClassName("buscador__plato-boton");
