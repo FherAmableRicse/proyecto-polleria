@@ -27,7 +27,7 @@
 }
 
 .header-statistics__title-logo {
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--primary-highlight-color);
   margin: 0;
   transition: var(--all-transitions);
@@ -35,7 +35,7 @@
 
 .header-statistics__title-logo:hover {
   text-shadow:
-    0 0 0.0625rem var(--secondary-highlight-color);
+    0 0 0.5rem var(--secondary-highlight-color);
 }
 
 .main-statistics {
@@ -43,7 +43,7 @@
 }
 
 .dashboards {
-  padding: 10rem 0;
+  padding: 9rem 0 2rem;
 }
 
 .dashboards__container {
@@ -60,7 +60,7 @@
   font-size: 2rem;
   text-decoration: underline;
   color: var(--primary-highlight-color);
-  text-shadow: 0 0 0.125rem var(--primary-highlight-color);
+  text-shadow: 0 0 0.5rem var(--secondary-highlight-color);
   margin: 0;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .dashboard-models__container {
-  padding: 4rem 6rem 4rem;
+  padding: 1rem 0rem 1rem;
   max-width: var(--max-width-container);
 }
 
@@ -79,12 +79,23 @@
   text-align: center;
   text-shadow: 0 0 0.25rem var(--primary-highlight-color);
   margin: 0;
-  padding-bottom: 3.5rem;
+  padding-bottom: 1rem;
 }
 
 .dashboard-models__chart {
-  width: 17rem;
-  height: 17rem;
-  padding: 1rem;
+  width: 22rem;
+  height: 22rem;
 
+}
+
+@media (min-width: 854px) {
+  .dashboard-models__chart{
+    width: 100%;
+  }
+  .header-statistics__title-logo {
+  font-size: 2rem;
+  }
+  .dashboards__title{
+    font-size: 3rem;
+  }
 }

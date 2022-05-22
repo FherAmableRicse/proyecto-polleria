@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pollo PICOM - Estadísticas </title>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 </head>
 
 <body class="body-statistics">
     <header class="header-statistics">
         <div class="header-statistics__container">
-            <a href="./index.html" class="header-nav__link-logo-container">
-                <img src="./img/logo.png" alt="Logo Pollería PICOM" class="header-nav__link-logo" />
+            <a href="../index.html" class="header-nav__link-logo-container">
+                <img src="../img/logo.png" alt="Logo Pollería PICOM" class="header-nav__link-logo" />
             </a>
             <h1 class="header-statistics__title-logo">Dashboard POLLO PICOM</h1>
         </div>
@@ -21,15 +22,26 @@
     <main class="main-statistics">
         <section class="dashboards">
             <div class="dashboards__container">
-                <h2 class="dashboards__title">Gráfico</h2>
+                <h2 class="dashboards__title">GRÁFICOS</h2>
                 <section class="dashboard-models">
                     <div class="dashboard-models__container">
-                        <h2 class="dashboard-models__title">Ventas por Sede</h2>
+                        <h2 class="dashboard-models__title">Ventas por Año</h2>
                         <canvas id="dashboardModel01" class="dashboard-models__chart"></canvas>
                     </div>
                 </section>
+                <section class="dashboard-models">
+                    <div class="dashboard-models__container">
+                        <h2 class="dashboard-models__title">Ventas por Meses</h2>
+                        <canvas id="dashboardModel02" class="dashboard-models__chart"></canvas>
+                    </div>
+                </section>
+                <section class="dashboard-models">
+                    <div class="dashboard-models__container">
+                        <h2 class="dashboard-models__title">Ventas por Sedes</h2>
+                        <canvas id="dashboardModel03" class="dashboard-models__chart"></canvas>
+                    </div>
+                </section>
             </div>
-
         </section>
     </main>
     <footer class="footer">
@@ -99,7 +111,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
         integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./js/statistics.js" type="module"></script>
+    <script src="../js/statistics.js" type="module"></script>
 </body>
 
 </html>
