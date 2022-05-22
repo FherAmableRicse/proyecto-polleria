@@ -1,6 +1,4 @@
 "use strict";
-import { Plato } from "./plato.js";
-import { itemsMenu } from "../utils/itemsMenu.js";
 import { fetchApi } from "../utils/apiUtils.js";
 
 const documentReady = () => {
@@ -92,7 +90,6 @@ const documentReady = () => {
         // Obtenemos el item que necesitamos de la variable base de datos
         const miItem = platos.filter((itemBaseDatos) => {
           // ¿Coincide las id? Solo puede existir un caso
-
           return itemBaseDatos.id === parseInt(item.id);
         });
         // Cuenta el número de veces que se repite el producto
@@ -132,7 +129,6 @@ const documentReady = () => {
       });
       localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
       renderizarCarrito();
-      //Actualizar local/sesion storage
     }
 
     function calcularTotal() {
@@ -150,7 +146,6 @@ const documentReady = () => {
       localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
       // Renderizamos los cambios
       renderizarCarrito();
-      //Actualizar local/sesion storage
     }
 
     // Eventos
