@@ -4,9 +4,7 @@ import { fetchApi } from "../utils/apiUtils.js";
 const documentReady = () => {
   const apiCarrito = async () => {
     let platos = [];
-    const fetchResultado = await fetchApi(
-      "https://fheramablericse.github.io/api-test/db.json"
-    );
+    const fetchResultado = await fetchApi("https://fheramablericse.github.io/api-test/db.json");
     platos = fetchResultado;
 
     const DOMcarrito = document.querySelector("#carrito");
@@ -132,7 +130,7 @@ const documentReady = () => {
 
     function calcularTotal() {
       let precios = [];
-      carritoCompra.forEach((item) => {
+      carritoCompra?.forEach((item) => {
         precios.push(item.precio);
       });
 
