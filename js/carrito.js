@@ -3,6 +3,9 @@ import { fetchApi } from "../utils/apiUtils.js";
 
 const documentReady = () => {
   const apiCarrito = async () => {
+    if (localStorage.getItem("itemsCarrito") === null) {
+      localStorage.setItem("itemsCarrito", JSON.stringify([]))
+    }
     let platos = [];
     const fetchResultado = await fetchApi("https://fheramablericse.github.io/api-test/db.json");
     platos = fetchResultado;
@@ -47,9 +50,12 @@ const documentReady = () => {
     };
 
     const asignarBotones = (botones, platosBuscados) => {
+      console.log(platosBuscados)
       for (let i = 0; i < botones.length; i++) {
         //Poner items en el carrito
         botones[i].addEventListener("click", () => {
+
+          console.log(localStorage.getItem("itemsCarrito"))
           if (localStorage.getItem("itemsCarrito")) {
             carritoCompra = JSON.parse(localStorage.getItem("itemsCarrito"));
             carritoCompra.push(platosBuscados[i]);
@@ -59,6 +65,8 @@ const documentReady = () => {
             carritoCompra.push(platosBuscados[i]);
             localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
             renderizarCarrito();
+
+
           }
         });
       }
