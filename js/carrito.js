@@ -35,13 +35,13 @@ const documentReady = () => {
             </figure>
             <h3 class="buscador__plato-title" id="platoTitle">${nombre}</h3>
             <h3 class="buscador__plato-precio">${precio.toLocaleString(
-              "es-PE",
-              {
-                style: "currency",
-                currency: "PEN",
-                minimumFractionDigits: 2,
-              }
-            )}</h3>
+          "es-PE",
+          {
+            style: "currency",
+            currency: "PEN",
+            minimumFractionDigits: 2,
+          }
+        )}</h3>
             <button type="button" class="buscador__plato-boton" id="${i}">Agregar</button>
             </div>
             `;
@@ -52,12 +52,12 @@ const documentReady = () => {
       for (let i = 0; i < botones.length; i++) {
         //Poner items en el carrito
         botones[i].addEventListener("click", () => {
-          if(localStorage.getItem("itemsCarrito")){
-            carritoCompra=JSON.parse(localStorage.getItem("itemsCarrito"));
+          if (localStorage.getItem("itemsCarrito")) {
+            carritoCompra = JSON.parse(localStorage.getItem("itemsCarrito"));
             carritoCompra.push(platosBuscados[i]);
             localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
             renderizarCarrito();
-          }else{
+          } else {
             carritoCompra.push(platosBuscados[i]);
             localStorage.setItem("itemsCarrito", JSON.stringify(carritoCompra));
             renderizarCarrito();
@@ -68,19 +68,19 @@ const documentReady = () => {
 
     function renderizarCarrito() {
       let carritoRender = JSON.parse(localStorage.getItem("itemsCarrito"));
-      carritoCompra=carritoRender;
+      carritoCompra = carritoRender;
       // Vaciamos todo el html
       DOMcarrito.textContent = "";
       // Quitamos los duplicados
       // const carritoSinDuplicados = [...new Set(carritoRender)];
-      const idsCarrito=carritoRender?.map((carritoItem)=>{
+      const idsCarrito = carritoRender?.map((carritoItem) => {
         return carritoItem.id;
       });
-      const idsSinDuplicados=[...new Set(idsCarrito)];
-      const carritoSinDuplicados=[];
-      idsSinDuplicados.forEach((id=>{
-        platos.forEach((plato)=>{
-          if(plato.id===id){
+      const idsSinDuplicados = [...new Set(idsCarrito)];
+      const carritoSinDuplicados = [];
+      idsSinDuplicados.forEach((id => {
+        platos.forEach((plato) => {
+          if (plato.id === id) {
             carritoSinDuplicados.push(plato);
           }
         });
@@ -100,13 +100,12 @@ const documentReady = () => {
         // Creamos el nodo del item del carritoCompra
         const miNodo = document.createElement("li");
         miNodo.classList.add("list-group-item", "text-right", "mx-2");
-        miNodo.textContent = `${numeroUnidadesItem} x ${
-          miItem[0].nombre
-        } ${miItem[0].precio.toLocaleString("es-PE", {
-          style: "currency",
-          currency: "PEN",
-          minimumFractionDigits: 2,
-        })}`;
+        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre
+          } ${miItem[0].precio.toLocaleString("es-PE", {
+            style: "currency",
+            currency: "PEN",
+            minimumFractionDigits: 2,
+          })}`;
         // Boton de borrar
         const miBoton = document.createElement("button");
         miBoton.classList.add("btn", "btn-danger", "mx-1");
